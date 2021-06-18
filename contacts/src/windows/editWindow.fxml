@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="400.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.EditView">
+    <padding>
+        <Insets bottom="10" left="30" right="30" top="10"/>
+    </padding>
+    <center>
+        <GridPane>
+            <columnConstraints>
+                <ColumnConstraints hgrow="ALWAYS" minWidth="130.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="ALWAYS" minWidth="200.0" prefWidth="200.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="40" minHeight="20.0" prefHeight="40" vgrow="ALWAYS"/>
+                <RowConstraints maxHeight="40" minHeight="20.0" prefHeight="40" vgrow="ALWAYS"/>
+                <RowConstraints maxHeight="40" minHeight="20.0" prefHeight="40" vgrow="ALWAYS"/>
+                <RowConstraints maxHeight="40" minHeight="20.0" prefHeight="40" vgrow="ALWAYS"/>
+                <RowConstraints maxHeight="40" minHeight="20.0" prefHeight="40" vgrow="ALWAYS"/>
+                <RowConstraints maxHeight="40" minHeight="20.0" prefHeight="40" vgrow="ALWAYS"/>
+                <RowConstraints maxHeight="40" minHeight="10.0" prefHeight="40" vgrow="ALWAYS"/>
+                <RowConstraints maxHeight="100" minHeight="10.0" prefHeight="80" vgrow="ALWAYS"/>
+            </rowConstraints>
+            <children>
+                <Label alignment="BASELINE_LEFT" prefHeight="30.0" prefWidth="173.0" text="Имя" GridPane.columnIndex="0"
+                       GridPane.rowIndex="0"/>
+                <TextField fx:id="name" alignment="BASELINE_CENTER" minHeight="30.0" prefHeight="19.0" prefWidth="200.0"
+                           GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <Label alignment="BASELINE_LEFT" prefHeight="30.0" prefWidth="155.0" text="Фамилия"
+                       GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                <TextField fx:id="surname" alignment="BASELINE_CENTER" minHeight="30.0" prefHeight="19.0"
+                           prefWidth="200.0"
+                           GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                <Label alignment="BASELINE_LEFT" prefHeight="30.0" prefWidth="150.0" text="Отчество"
+                       GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                <TextField fx:id="patronymic" alignment="BASELINE_CENTER" minHeight="30.0" prefHeight="19.0"
+                           prefWidth="200.0"
+                           GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                <Label alignment="BASELINE_LEFT" prefHeight="30.0" prefWidth="157.0" text="Мобильный телефон"
+                       GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                <TextField fx:id="mobileNumber" alignment="BASELINE_CENTER" minHeight="30.0" prefHeight="19.0"
+                           prefWidth="200.0"
+                           GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                <Label alignment="BASELINE_LEFT" prefHeight="30.0" prefWidth="157.0" text="Домашний телефон"
+                       GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+                <TextField fx:id="homeNumber" alignment="BASELINE_CENTER" minHeight="30.0" prefHeight="19.0"
+                           prefWidth="200.0"
+                           GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+                <Label alignment="BASELINE_LEFT" prefHeight="30.0" prefWidth="150.0" text="Адрес"
+                       GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+                <TextField fx:id="address" alignment="BASELINE_CENTER" minHeight="30.0" prefHeight="30.0"
+                           prefWidth="200.0"
+                           GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+                <Label alignment="BASELINE_LEFT" prefHeight="30.0" prefWidth="160.0" text="День рождения"
+                       GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+                <DatePicker fx:id="date" minHeight="30.0" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1"
+                            GridPane.rowIndex="6"/>
+
+                <TextArea fx:id="comment" maxHeight="-Infinity" minHeight="19.0" prefHeight="75" prefWidth="300.0"
+                          wrapText="true"
+                          GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="7"/>
+            </children>
+        </GridPane>
+    </center>
+    <bottom>
+        <BorderPane>
+            <right>
+                <HBox spacing="20">
+                    <Button text="Отмена" onAction="#cancel"/>
+
+                    <Button text="Cохранить" onAction="#saveContact"/>
+                </HBox>
+            </right>
+        </BorderPane>
+    </bottom>
+</BorderPane>
